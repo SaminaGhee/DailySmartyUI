@@ -4,7 +4,7 @@ import SearchBar from './searchbar';
 
 import * as actions from '../actions';
 
-class RecentPosts extends Component { //why does mine say "RecentPosts" and max's says "SearchBar" this guy is confusing me...
+class RecentPosts extends Component {
 
     componentDidMount() {
         this.props.fetchRecentPosts();
@@ -20,6 +20,7 @@ class RecentPosts extends Component { //why does mine say "RecentPosts" and max'
                             <li>recent post 2</li>
                         </ul>
                     </div>
+                    
 
                 </div>
         )
