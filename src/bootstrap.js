@@ -5,8 +5,10 @@ import { createStore, applyMiddleware } from "redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import reducers from "./reducers";
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+import thunk from 'redux-thunk';
 
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore); //redux.js:642 Uncaught TypeError: middleware is not a function
+// if thunk doesn't work then why am I doing this? SMH
 import "./style/main.scss";
 
 import Home from "./components/home";

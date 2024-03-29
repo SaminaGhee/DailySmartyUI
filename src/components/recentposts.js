@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import SearchBar from './searchbar';
 
+import * as actions from '../actions';
 
-class RecentPosts extends Component {
+class RecentPosts extends Component { //why does mine say "RecentPosts" and max's says "SearchBar" this guy is confusing me...
+
+    componentDidMount() {
+        this.props.fetchRecentPosts();
+    }
     render() {
         return (
                 <div className="recent-posts">
@@ -20,4 +27,4 @@ class RecentPosts extends Component {
 
 }
 
-export default RecentPosts;
+export default connect(null, actions)(RecentPosts);

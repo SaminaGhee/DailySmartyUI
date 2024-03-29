@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Logo from "./logo";
+import Logo from './logo';
 import SearchBar from './searchbar';
 import RecentPosts from './recentposts';
 
