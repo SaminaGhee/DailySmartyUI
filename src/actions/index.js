@@ -1,0 +1,15 @@
+import { SET_RECENT_POSTS } from './types';
+import axios from 'axios';
+
+export function fetchRecentPosts() {
+    return function(dispatch) {
+        axios.getUri('https://api.dailysmarty.com/posts') //Why did VSC put Uri on get request?
+        .then(response => {
+          console.log(response.data.posts);
+          dispatch({
+            type: SET_RECENT_POSTS,
+            payload: response.data.posts
+          })
+        })
+    }
+}

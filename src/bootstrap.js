@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import reducers from "./reducers";
 
 import thunk from 'redux-thunk';
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore); //redux.js:642 Uncaught TypeError: middleware is not a function
+import reducers from "./reducers";
+
+
+const createStoreWithMiddleware = applyMiddleware(thunk)(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore))); //redux.js:642 Uncaught TypeError: middleware is not a function
 // if thunk doesn't work then why am I doing this? SMH
 import "./style/main.scss";
 
