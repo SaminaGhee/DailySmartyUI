@@ -6,7 +6,7 @@ import { reducer as Form } from 'redux-form';
 
 const rootReducer = combineReducers({
   Form,
-  post
+  
 });
 
 export default rootReducer;
