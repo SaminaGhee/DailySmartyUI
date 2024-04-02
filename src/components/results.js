@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Logo from './logo';
+import SearchBar from './searchbar';
 
 class Results extends Component {
     render() {
         return (
             <div>
-            <h1> results </h1>
-            <Logo/>
+            <Logo size={55}/>
+            <SearchBar/>
             </div>
         )
     }
