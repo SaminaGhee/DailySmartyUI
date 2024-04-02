@@ -6,11 +6,13 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import thunk from 'redux-thunk';
 
-import reducers from "./reducers";
+import rootReducers from "./reducers";
 
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore))); //redux.js:642 Uncaught TypeError: middleware is not a function
-// if thunk doesn't work then why am I doing this? SMH
+const createStoreWithMiddleware = createStore( rootReducers, applyMiddleware(thunk)
+// const  createStoreWithMiddleware = applyMiddleware(ReduxThunk)
+(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore))));
+
 import "./style/main.scss";
 
 import Home from "./components/home";
@@ -18,7 +20,7 @@ import Results from "./components/results.js";
 
 function main() {
   ReactDOM.render(
-    <Provider store={createStoreWithMiddleware(reducers)}>
+    <Provider store={createStoreWithMiddleware(rootReducers)}>
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Home}/>
@@ -31,3 +33,4 @@ function main() {
 }
 
 document.addEventListener("DOMContentLoaded", main);
+export default rootReducers;
