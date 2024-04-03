@@ -8,17 +8,21 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-family: 'montserrat';
+    font-family: 'Lato', sans-serif;
 }
 
 body {
-    overflow-x: hidden;
-    font-weight: normal;
+    font-family: 'Lato', sans-serif;
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: transparent;
+
+
+    // overflow-x: hidden;
+    // font-weight: normal;
+
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    // text-rendering: optimizeLegibility;
+    // -webkit-tap-highlight-color: transparent;
 }
 
 .app {
@@ -29,4 +33,8 @@ body {
 
 .post-topic {
     margin: 0 4px;
+}
+
+.home {
+    
 }
