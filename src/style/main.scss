@@ -46,5 +46,15 @@ body {
     align-content: space-around;
     justify-items: center;
     // grid-template-rows: 1fr 2fr 1fr;
-
 }
+
+$color-gray-one: #666666;
+$color-gray-two: #B3B3B3;
+
+@import "./searchBar";
+
+// .logo-main {               // this lump of code changes only the 'daily smarty' logo at the top of the homepage
+//     display: grid;
+//     justify-content: center;
+//     align-items: center;
+// }
