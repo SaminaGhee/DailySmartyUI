@@ -5,7 +5,7 @@
     display: grid;
 
     margin-top: 52px;
-    grid_row_gap: 44px;
+    grid-row-gap: 44px;
 }
 
 .results-posts {
@@ -23,7 +23,7 @@
 .result-post {
     display: grid;
     align-content: space-around;
-    grid_row_gap: 22px;
+    grid-row-gap: 22px;
 
     .result-post__topics > * {
         color: $color-blue-one;
